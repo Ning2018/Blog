@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 26, 2018 1:38:24 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="entity.Comment" table="COMMENT">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="articleId" type="int">
+            <column name="ARTICLEID" />
+        </property>
+        <many-to-one name="commentUser" class="entity.User" fetch="join">
+            <column name="COMMENTUSER" />
+        </many-to-one>
+        <property name="commentTime" type="java.sql.Time">
+            <column name="COMMENTTIME" />
+        </property>
+        <property name="is_delete" type="boolean">
+            <column name="IS_DELETE" />
+        </property>
+    </class>
+</hibernate-mapping>

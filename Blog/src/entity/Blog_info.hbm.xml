@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 26, 2018 1:38:24 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="entity.Blog_info" table="BLOG_INFO">
+        <id name="blog_name" type="java.lang.String">
+            <column name="BLOG_NAME" />
+            <generator class="assigned" />
+        </id>
+        <property name="description" type="java.lang.String">
+            <column name="DESCRIPTION" />
+        </property>
+        <property name="announcement" type="java.lang.String">
+            <column name="ANNOUNCEMENT" />
+        </property>
+    </class>
+</hibernate-mapping>

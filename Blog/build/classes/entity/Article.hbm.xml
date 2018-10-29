@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 26, 2018 1:38:24 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="entity.Article" table="ARTICLE">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="title" type="java.lang.String">
+            <column name="TITLE" />
+        </property>
+        <many-to-one name="user" class="entity.User" fetch="join" lazy="false">
+            <column name="USER" />
+        </many-to-one>
+        <many-to-one name="lastReplyUser" class="entity.User" fetch="join" lazy="false">
+            <column name="LASTREPLYUSER" />
+        </many-to-one>
+        <property name="summary" type="java.lang.String">
+            <column name="SUMMARY" />
+        </property>
+        <property name="postArticleTime" type="java.util.Date">
+            <column name="POSTARTICLETIME" />
+        </property>
+        <property name="lastReplyTime" type="java.util.Date">
+            <column name="LASTREPLYTIME" />
+        </property>
+        <property name="lastEditTime" type="java.util.Date">
+            <column name="LASTEDITTIME" />
+        </property>
+        <property name="is_top" type="boolean">
+            <column name="IS_TOP" />
+        </property>
+        <property name="is_delete" type="boolean">
+            <column name="IS_DELETE" />
+        </property>
+        <property name="viewCount" type="int">
+            <column name="VIEWCOUNT" />
+        </property>
+        <property name="replyCount" type="int">
+            <column name="REPLYCOUNT" />
+        </property>
+        <property name="articlePath" type="java.lang.String">
+            <column name="ARTICLEPATH" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 26, 2018 1:38:24 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="entity.Sys_category" table="SYS_CATEGORY">
+        <id name="category_name" type="java.lang.String">
+            <column name="CATEGORY_NAME" />
+            <generator class="assigned" />
+        </id>
+        <property name="articals" type="int">
+            <column name="ARTICALS" />
+        </property>
+        <property name="is_delete" type="boolean">
+            <column name="IS_DELETE" />
+        </property>
+    </class>
+</hibernate-mapping>
